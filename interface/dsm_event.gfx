@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "DSM_dsm_dsm_1"
+		texturefile = "gfx//event_pictures//Dsm_dsm_1.png"
+	}
+}

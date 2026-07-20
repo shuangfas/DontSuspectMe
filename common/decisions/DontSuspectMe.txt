@@ -3,25 +3,30 @@ ATW_the_final_solution_category = {
 		allowed = {
 			original_tag = ATW
 		}
-		cost=50
-		days_remove=30
+		cost = 50
+		days_remove = 30
 		days_re_enable = 50
-		remove_effect={
-			add_stability=0.1
-			add_war_support=-0.1
-			add_manpower=-100
-			set_temp_variable = {
-				var = ATW_suspicion_var_temp
-				value = -0.10
+		remove_effect = {
+			# add_stability=0.1
+			# add_war_support=-0.1
+			# add_manpower=-100
+			# set_temp_variable = {
+			# 	var = ATW_suspicion_var_temp
+			# 	value = -0.1
+			# }
+			# ATW_add_suspicion = yes
+		}
+		complete_effect = {
+			country_event = {
+				id = dsm.1
 			}
-			ATW_add_suspicion = yes
 		}
 	}
-	ATW_leak_false_information={
+	ATW_leak_false_information = {
 		allowed = {
 			original_tag = ATW
 		}
-		cost=50
+		cost = 50
 		custom_cost_text = NSM_revanchist_reconquest_campaign_decision_cost
 		custom_cost_trigger = {
 			NOT = {
@@ -33,12 +38,11 @@ ATW_the_final_solution_category = {
 			hidden_effect = {
 				add_command_power = -20
 			}
-		
 		}
-		remove_effect={
+		remove_effect = {
 			set_temp_variable = {
 				var = ATW_suspicion_var_temp
-				value = -0.20
+				value = -0.2
 			}
 			ATW_add_suspicion = yes
 		}

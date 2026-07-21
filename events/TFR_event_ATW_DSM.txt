@@ -71,3 +71,20 @@ country_event = {
 		ATW_add_suspicion = yes
 	}
 }
+country_event = {
+	id = dsm.4
+	title = dsm.4.t
+	desc = dsm.4.desc
+	picture = DSM_dsm_dsm_4
+	is_triggered_only = yes
+	trigger = {
+		tag = ATW
+	}
+	option = {
+		name = dsm.4.a
+	}
+	option = {
+		name = dsm.4.b
+		
+	}
+}

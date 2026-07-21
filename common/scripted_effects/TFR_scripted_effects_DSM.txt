@@ -1,5 +1,4 @@
 DSM_calcucate_discount={
-	#Passed-in original cost to ATW_decision_cost_DSM
 	set_variable = {
 		var = DSM_dynamic_cost_ratio
 		value = 0
@@ -24,5 +23,33 @@ DSM_calcucate_discount={
 		var = DSM_dynamic_cost_ratio
 		min = 0.4
 		max = 5
+	}
+}
+#Passed-in original cost to DSM_temp_cost temp_variable
+DSM_apply_cost_pp={
+	log = "[?DSM_temp_cost]"
+	multiply_temp_variable = {
+		var = DSM_temp_cost
+		value = DSM_dynamic_cost_ratio
+	}
+	multiply_temp_variable = {
+		var = DSM_temp_cost
+		value = -1
+	}
+	hidden_effect = {
+		add_political_power = DSM_temp_cost
+	}
+}
+DSM_apply_cost_cp={
+	multiply_temp_variable = {
+		var = DSM_temp_cost
+		value = DSM_dynamic_cost_ratio
+	}
+	multiply_temp_variable = {
+		var = DSM_temp_cost
+		value = -1
+	}
+	hidden_effect = {
+		add_command_power = DSM_temp_cost
 	}
 }

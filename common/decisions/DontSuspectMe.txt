@@ -11,6 +11,13 @@ ATW_the_final_solution_category = {
 			}
 			DSM_can_afford_dynamic_cost_pp=yes
 		}
+		complete_effect = {
+			set_temp_variable = {
+				var = DSM_temp_cost
+				value = 75
+			}
+			DSM_apply_cost_pp=yes
+		}
 		days_remove = 30
 		days_re_enable = 50
 		remove_effect = {
@@ -135,6 +142,11 @@ ATW_the_final_solution_category = {
 				value = -0.2
 			}
 			ATW_add_suspicion = yes
+			set_temp_variable = {
+				var = DSM_temp_cost
+				value = 100
+			}
+			DSM_apply_cost_pp=yes
 			country_event = {
 				id = dsm.2
 			}
@@ -168,6 +180,13 @@ ATW_the_final_solution_category = {
 		modifier = {
 			nuclear_production_factor = -0.9
 		}
+		complete_effect = {
+			set_temp_variable = {
+				var = DSM_temp_cost
+				value = 75
+			}
+			DSM_apply_cost_pp=yes
+		}
 		remove_effect = {
 			country_event = {
 				id = dsm.3
@@ -199,9 +218,16 @@ ATW_the_final_solution_category = {
 			civilian_factory_use = 5
 		}
 		complete_effect = {
-			hidden_effect = {
-				add_command_power = -20
+			set_temp_variable = {
+				var = DSM_temp_cost
+				value = 50
 			}
+			DSM_apply_cost_pp=yes
+			set_temp_variable = {
+				var = DSM_temp_cost
+				value = 50
+			}
+			DSM_apply_cost_cp=yes
 		}
 		remove_effect = {
 			hidden_effect = {

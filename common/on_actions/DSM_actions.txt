@@ -4,9 +4,26 @@ on_actions = {
 			DSM_calcucate_discount=yes
 		}
 	}
-	on_monthly_ATW = {
-		effect = {
-			
+	#TODO:多次行动增加花费
+	#on_monthly_ATW = {
+	#	effect = {
+	#		
+	#	}
+	#}
+	on_war = {
+		effect={
+			if = {
+				limit = { 
+					this = {
+						tag = ATW
+						has_country_flag = ATW_the_final_solution_super
+					}
+				}
+				country_event = {
+					id = dsm.4
+					days = 3
+				}
+			}
 		}
 	}
 }

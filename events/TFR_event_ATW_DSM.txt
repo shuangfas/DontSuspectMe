@@ -4,6 +4,7 @@ country_event = {
 	title = dsm.1.t
 	desc = dsm.1.desc
 	picture = DSM_dsm_dsm_1
+	is_triggered_only = yes
 	trigger = {
 		tag = ATW
 	}
@@ -11,10 +12,61 @@ country_event = {
 		name = dsm.1.a
 		add_stability = 0.1
 		add_war_support = -0.1
-		add_manpower = -100
+		if = {
+			limit = {
+				any_army_leader = {
+					is_field_marshal = no
+					has_trait = trait_reckless
+				}
+			}
+			add_manpower = -99
+			random_army_leader = {
+				limit = {
+					has_trait = trait_reckless
+					is_field_marshal = no
+				}
+				retire = yes
+			}
+		}
+		else = {
+			add_manpower = -100
+		}
 		set_temp_variable = {
 			var = ATW_suspicion_var_temp
 			value = -0.1
+		}
+		ATW_add_suspicion = yes
+	}
+}
+
+country_event = {
+	id = dsm.2
+	title = dsm.2.t
+	desc = dsm.2.desc
+	picture = DSM_dsm_dsm_2
+	is_triggered_only = yes
+	trigger = {
+		tag = ATW
+	}
+	option = {
+		name = dsm.2.a
+	}
+}
+
+country_event = {
+	id = dsm.3
+	title = dsm.3.t
+	desc = dsm.3.desc
+	picture = DSM_dsm_dsm_3
+	is_triggered_only = yes
+	trigger = {
+		tag = ATW
+	}
+	option = {
+		name = dsm.3.a
+		set_temp_variable = {
+			var = ATW_suspicion_var_temp
+			value = -0.15
 		}
 		ATW_add_suspicion = yes
 	}

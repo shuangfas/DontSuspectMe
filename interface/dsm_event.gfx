@@ -3,4 +3,12 @@ spriteTypes = {
 		name = "DSM_dsm_dsm_1"
 		texturefile = "gfx//event_pictures//Dsm_dsm_1.png"
 	}
+	spriteType = {
+		name = "DSM_dsm_dsm_2"
+		texturefile = "gfx//event_pictures//Dsm_dsm_2.png"
+	}
+	spriteType = {
+		name = "DSM_dsm_dsm_3"
+		texturefile = "gfx//event_pictures//Dsm_dsm_3.png"
+	}
 }

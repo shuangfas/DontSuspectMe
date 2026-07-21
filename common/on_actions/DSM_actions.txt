@@ -1,0 +1,12 @@
+on_actions = {
+	on_daily_ATW = {
+		effect = {
+			DSM_calcucate_discount=yes
+		}
+	}
+	on_monthly_ATW = {
+		effect = {
+			
+		}
+	}
+}

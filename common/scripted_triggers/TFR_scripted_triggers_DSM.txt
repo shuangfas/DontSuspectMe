@@ -1,0 +1,34 @@
+DSM_can_afford_dynamic_cost_pp={
+	hidden_trigger = {
+		multiply_temp_variable = {
+			var = DSM_temp_cost
+			value = DSM_dynamic_cost_ratio
+		}
+		if = {
+			limit = { 
+				has_political_power > DSM_temp_cost
+			}
+			always = yes
+		}
+		else = {
+			always = no
+		}
+	}
+}
+DSM_can_afford_dynamic_cost_cp={
+	hidden_trigger = {
+		multiply_temp_variable = {
+			var = DSM_temp_cost
+			value = DSM_dynamic_cost_ratio
+		}
+		if = {
+			limit = { 
+				command_power > DSM_temp_cost
+			}
+			always = yes
+		}
+		else = {
+			always = no
+		}
+	}
+}

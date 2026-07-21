@@ -1,0 +1,11 @@
+add_namespace = dsm_news
+news_event = {
+	id = dsm_news.1
+	title = dsm_news.1
+	desc = dsm_news.1.desc
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = dsm.news.1.a
+	}
+}

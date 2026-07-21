@@ -1,0 +1,69 @@
+defined_text ={
+	name = DSM_dynamic_cost_50_pp_and_50_cp
+	text = {
+		trigger = {
+			set_temp_variable = {
+				var = DSM_temp_cost
+				value = 50
+			}
+			multiply_temp_variable = {
+				var = DSM_temp_cost
+				value = DSM_dynamic_cost_ratio
+			}
+			always = yes
+		}
+		localization_key = ATW_dynamic_cost_pp_and_cp
+	}
+}
+defined_text ={
+	name = DSM_dynamic_cost_50_pp
+	text = {
+		trigger = {
+			set_temp_variable = {
+				var = DSM_temp_cost
+				value = 50
+			}
+			multiply_temp_variable = {
+				var = DSM_temp_cost
+				value = DSM_dynamic_cost_ratio
+			}
+			always = yes
+		}
+		localization_key = ATW_dynamic_cost_pp_and_cp
+	}
+}
+defined_text ={
+	name = DSM_dynamic_cost_75_pp
+	text = {
+		trigger = {
+			set_temp_variable = {
+				var = DSM_temp_cost
+				value = 75
+			}
+			multiply_temp_variable = {
+				var = DSM_temp_cost
+				value = DSM_dynamic_cost_ratio
+			}
+			always = yes
+		}
+		localization_key = ATW_dynamic_cost_pp
+	}
+}
+defined_text ={
+	name = DSM_dynamic_cost_100_pp
+	text = {
+		trigger = {
+			set_temp_variable = {
+				var = DSM_temp_cost
+				value = 100
+			}
+			multiply_temp_variable = {
+				var = DSM_temp_cost
+				value = DSM_dynamic_cost_ratio
+			}
+			always = yes
+		}
+		localization_key = ATW_dynamic_cost_pp
+	}
+}
+

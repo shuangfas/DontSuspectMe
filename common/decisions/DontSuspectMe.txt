@@ -3,22 +3,174 @@ ATW_the_final_solution_category = {
 		allowed = {
 			original_tag = ATW
 		}
-		cost = 50
+		custom_cost_text = DSM_cost_75_pp
+		custom_cost_trigger = {
+			set_temp_variable = {
+				var = DSM_temp_cost
+				value = 75
+			}
+			DSM_can_afford_dynamic_cost_pp=yes
+		}
 		days_remove = 30
 		days_re_enable = 50
 		remove_effect = {
-			# add_stability=0.1
-			# add_war_support=-0.1
-			# add_manpower=-100
-			# set_temp_variable = {
-			# 	var = ATW_suspicion_var_temp
-			# 	value = -0.1
-			# }
-			# ATW_add_suspicion = yes
-		}
-		complete_effect = {
 			country_event = {
 				id = dsm.1
+			}
+		}
+	}
+	ATW_establish_a_military_buffer_zone = {
+		allowed = {
+			original_tag = ATW
+		}
+		custom_cost_text = DSM_cost_100_pp
+		custom_cost_trigger = {
+			set_temp_variable = {
+				var = DSM_temp_cost
+				value = 100
+			}
+			DSM_can_afford_dynamic_cost_pp=yes
+		}
+		fire_only_once = yes
+		complete_effect = {
+			hidden_effect = {
+				952 = {
+					set_demilitarized_zone = yes
+				}
+				946 = {
+					set_demilitarized_zone = yes
+				}
+				951 = {
+					set_demilitarized_zone = yes
+				}
+				985 = {
+					set_demilitarized_zone = yes
+				}
+				987 = {
+					set_demilitarized_zone = yes
+				}
+				839 = {
+					set_demilitarized_zone = yes
+				}
+				960 = {
+					set_demilitarized_zone = yes
+				}
+				964 = {
+					set_demilitarized_zone = yes
+				}
+				963 = {
+					set_demilitarized_zone = yes
+				}
+				966 = {
+					set_demilitarized_zone = yes
+				}
+				969 = {
+					set_demilitarized_zone = yes
+				}
+				962 = {
+					set_demilitarized_zone = yes
+				}
+				1081 = {
+					set_demilitarized_zone = yes
+				}
+				1082 = {
+					set_demilitarized_zone = yes
+				}
+				1083 = {
+					set_demilitarized_zone = yes
+				}
+				1088 = {
+					set_demilitarized_zone = yes
+				}
+				1299 = {
+					set_demilitarized_zone = yes
+				}
+				1080 = {
+					set_demilitarized_zone = yes
+				}
+				388 = {
+					set_demilitarized_zone = yes
+				}
+				1239 = {
+					set_demilitarized_zone = yes
+				}
+				389 = {
+					set_demilitarized_zone = yes
+				}
+				1257 = {
+					set_demilitarized_zone = yes
+				}
+				1256 = {
+					set_demilitarized_zone = yes
+				}
+				1072 = {
+					set_demilitarized_zone = yes
+				}
+				1074 = {
+					set_demilitarized_zone = yes
+				}
+				1117 = {
+					set_demilitarized_zone = yes
+				}
+				1118 = {
+					set_demilitarized_zone = yes
+				}
+				1079 = {
+					set_demilitarized_zone = yes
+				}
+				1114 = {
+					set_demilitarized_zone = yes
+				}
+				792 = {
+					set_demilitarized_zone = yes
+				}
+				1115 = {
+					set_demilitarized_zone = yes
+				}
+			}
+			custom_effect_tooltip = ATW_establish_a_military_buffer_zone_effect_desc
+			add_war_support = -0.3
+			set_temp_variable = {
+				var = ATW_suspicion_var_temp
+				value = -0.2
+			}
+			ATW_add_suspicion = yes
+			country_event = {
+				id = dsm.2
+			}
+		}
+	}
+	ATW_disguised_nuclear_reactor_decision = {
+		allowed = {
+			original_tag = ATW
+		}
+		custom_cost_text = DSM_cost_75_pp
+		custom_cost_trigger = {
+			set_temp_variable = {
+				var = DSM_temp_cost
+				value = 75
+			}
+			DSM_can_afford_dynamic_cost_pp=yes
+		}
+		#fire_only_once = yes
+		days_remove = 7
+		available = {
+			num_of_civilian_factories_available_for_projects > 5
+			set_temp_variable = {
+				var = ATW_suspicion_trigger_var_temp
+				value = 0.5
+			}
+			ATW_has_suspicion_less_than = yes
+		}
+		modifier = {
+			civilian_factory_use = 5
+		}
+		modifier = {
+			nuclear_production_factor = -0.9
+		}
+		remove_effect = {
+			country_event = {
+				id = dsm.3
 			}
 		}
 	}
@@ -26,25 +178,50 @@ ATW_the_final_solution_category = {
 		allowed = {
 			original_tag = ATW
 		}
-		cost = 50
-		custom_cost_text = NSM_revanchist_reconquest_campaign_decision_cost
+		custom_cost_text = DSM_cost_50_pp_and_50_cp
 		custom_cost_trigger = {
-			NOT = {
-				command_power < 20
+			set_temp_variable = {
+				var = DSM_temp_cost
+				value = 50
+			}
+			AND = {
+				DSM_can_afford_dynamic_cost_pp=yes
+				DSM_can_afford_dynamic_cost_cp = yes
 			}
 		}
-		fire_only_once = yes
+		available = {
+			NOT = {
+				num_of_civilian_factories_available_for_projects < 5
+			}
+		}
+		#fire_only_once = yes
+		modifier = {
+			civilian_factory_use = 5
+		}
 		complete_effect = {
 			hidden_effect = {
 				add_command_power = -20
 			}
 		}
 		remove_effect = {
-			set_temp_variable = {
-				var = ATW_suspicion_var_temp
-				value = -0.2
+			hidden_effect = {
+				###coming soon
+				#	if = {
+				#	limit = { 
+				#		set_temp_variable = {
+				#			var = ATW_suspicion_trigger_var_temp
+				#			value = 0.6
+				#		}
+				#		ATW_has_suspicion_greater_than_or_equals = yes
+				#	}
+				#	add_command_power = -20
+				#}
+				#set_temp_variable = {
+				#	var = ATW_suspicion_var_temp
+				#	value = -0.20
+				#}
+				#ATW_add_suspicion = yes
 			}
-			ATW_add_suspicion = yes
 		}
 	}
 }

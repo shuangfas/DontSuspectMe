@@ -1,0 +1,8 @@
+﻿l_english:
+ ATW_execute_most_extreme_extremists_decision: "Execute the Most Extreme Extremists"
+ ATW_execute_most_extreme_extremists_decision_desc: "Publicly execute certain non-core members who have publicly posted extreme remarks on social media, declaring to the world that we are no longer terrorists."
+ ATW_leak_false_information: "Leak False Information"
+ ATW_leak_false_information_desc: "Deliberately have our intelligence agencies publicly declare to the United Nations that our only goal is to unify North America, unite, and establish a pure Aryan nation\n §YOnce our true intentions are exposed or suspected, we will be listed by the UN as§! §Rthe number one threat§!, §Yand face§! §Rglobal encirclement§!"
+ dsm.1.t: "Roulette"
+ dsm.1.desc: "The eyes of the world are fixed on a few individuals.\n\nThey are called the \"Extremist Remnants.\" Their names, photos, and past remarks are repeatedly broadcast on news channels across every nation. People wait to witness this public trial, waiting for an answer.\n\nIs [ATW.GetName] truly changing?\n\nThe official answer is yes.\n\n\"We acknowledge past mistakes.\"\n\n\"We will no longer allow hatred and madness to dictate our future.\"\n\n\"Today, we purge the most extreme voices.\"\n\nBut those standing on the stage are merely the most expendable pawns. They are not the decision-makers, not the planners, not even the true core of this system. They were simply too public in saying what should never have been heard by the world.\n\nBut that is enough.\n\nThe world needs an explanation, and [ATW.GetName] needs a scapegoat.\n\nAs the death knell tolls, the last name is crossed off the list."
+ dsm.1.a: "Better to kill a few madmen than to be exposed."

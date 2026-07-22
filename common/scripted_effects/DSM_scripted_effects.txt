@@ -1,4 +1,4 @@
-DSM_calcucate_discount={
+DSM_calcucate_discount = {
 	set_variable = {
 		var = DSM_dynamic_cost_ratio
 		value = 0
@@ -13,11 +13,11 @@ DSM_calcucate_discount={
 	}
 	multiply_variable = {
 		var = DSM_dynamic_cost_ratio
-		value=2
+		value = 2
 	}
 	add_to_variable = {
 		var = DSM_dynamic_cost_ratio
-		value=1
+		value = 1
 	}
 	clamp_variable = {
 		var = DSM_dynamic_cost_ratio
@@ -25,8 +25,9 @@ DSM_calcucate_discount={
 		max = 5
 	}
 }
+
 #Passed-in original cost to DSM_temp_cost temp_variable
-DSM_apply_cost_pp={
+DSM_apply_cost_pp = {
 	log = "[?DSM_temp_cost]"
 	multiply_temp_variable = {
 		var = DSM_temp_cost
@@ -40,7 +41,8 @@ DSM_apply_cost_pp={
 		add_political_power = DSM_temp_cost
 	}
 }
-DSM_apply_cost_cp={
+
+DSM_apply_cost_cp = {
 	multiply_temp_variable = {
 		var = DSM_temp_cost
 		value = DSM_dynamic_cost_ratio
@@ -51,5 +53,29 @@ DSM_apply_cost_cp={
 	}
 	hidden_effect = {
 		add_command_power = DSM_temp_cost
+	}
+}
+
+DSM_calculate_disarmament_require = {
+	set_variable = {
+		var = DSM_disarmament_require
+		value = deployed_army_manpower_k
+	}
+	multiply_variable = {
+		var = DSM_disarmament_require
+		value = 700		#0.6*k
+	}
+	log = "[?DSM_disarmament_require]"
+}
+
+DSM_activate_disarmament = {
+	DSM_calculate_disarmament_require = yes
+	activate_mission = DSM_disarmament_misson
+	country_lock_all_division_template = no
+	hidden_effect = {
+		set_division_template_lock = {
+			division_template = "Special Security Division"
+			is_locked = no
+		}
 	}
 }

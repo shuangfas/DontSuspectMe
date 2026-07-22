@@ -19,11 +19,6 @@ on_actions = {
 						has_country_flag = ATW_the_final_solution_super
 					}
 				}
-				country_event = {
-					id = dsm.4
-					days = 3
-				}
-			}
 		}
 	}
 }

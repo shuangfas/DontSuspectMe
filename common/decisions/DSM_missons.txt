@@ -1,0 +1,21 @@
+ATW_the_final_solution_category = {
+	DSM_disarmament_misson = {
+		days_mission_timeout = 32
+		is_good = no
+		activation = {
+			always = no
+		}
+		available = {
+			has_army_manpower = {
+				size < DSM_disarmament_require
+			}
+		}
+		complete_effect = {
+			set_temp_variable = {
+				var = ATW_suspicion_var_temp
+				value = -0.40
+			}
+			ATW_add_suspicion = yes
+		}
+	}
+}

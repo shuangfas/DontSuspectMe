@@ -71,6 +71,7 @@ country_event = {
 		ATW_add_suspicion = yes
 	}
 }
+
 country_event = {
 	id = dsm.4
 	title = dsm.4.t
@@ -82,9 +83,18 @@ country_event = {
 	}
 	option = {
 		name = dsm.4.a
+		DSM_activate_disarmament = yes
 	}
 	option = {
 		name = dsm.4.b
-		
+	}
+	option = {
+		name = dsm.4.c
+		custom_effect_tooltip = dsm.4.c.desc
+		hidden_effect = {
+			country_event = {
+				id = atom.84
+			}
+		}
 	}
 }

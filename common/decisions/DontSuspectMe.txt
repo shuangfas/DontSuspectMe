@@ -1,5 +1,5 @@
 ATW_the_final_solution_category = {
-	ATW_execute_most_extreme_extremists_decision = {
+	DSM_execute_most_extreme_extremists_decision = {
 		allowed = {
 			original_tag = ATW
 		}
@@ -26,7 +26,7 @@ ATW_the_final_solution_category = {
 			}
 		}
 	}
-	ATW_establish_a_military_buffer_zone = {
+	DSM_establish_a_military_buffer_zone = {
 		allowed = {
 			original_tag = ATW
 		}
@@ -135,7 +135,7 @@ ATW_the_final_solution_category = {
 					set_demilitarized_zone = yes
 				}
 			}
-			custom_effect_tooltip = ATW_establish_a_military_buffer_zone_effect_desc
+			custom_effect_tooltip = DSM_establish_a_military_buffer_zone_effect_desc
 			add_war_support = -0.3
 			set_temp_variable = {
 				var = ATW_suspicion_var_temp
@@ -152,7 +152,7 @@ ATW_the_final_solution_category = {
 			}
 		}
 	}
-	ATW_disguised_nuclear_reactor_decision = {
+	DSM_disguised_nuclear_reactor_decision = {
 		allowed = {
 			original_tag = ATW
 		}
@@ -193,7 +193,7 @@ ATW_the_final_solution_category = {
 			}
 		}
 	}
-	ATW_leak_false_information = {
+	DSM_leak_false_information = {
 		allowed = {
 			original_tag = ATW
 		}

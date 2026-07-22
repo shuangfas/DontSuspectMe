@@ -12,7 +12,7 @@ defined_text ={
 			}
 			always = yes
 		}
-		localization_key = ATW_dynamic_cost_pp_and_cp
+		localization_key = DSM_dynamic_cost_pp_and_cp
 	}
 }
 defined_text ={
@@ -29,7 +29,7 @@ defined_text ={
 			}
 			always = yes
 		}
-		localization_key = ATW_dynamic_cost_pp_and_cp
+		localization_key = DSM_dynamic_cost_pp_and_cp
 	}
 }
 defined_text ={
@@ -46,7 +46,7 @@ defined_text ={
 			}
 			always = yes
 		}
-		localization_key = ATW_dynamic_cost_pp
+		localization_key = DSM_dynamic_cost_pp
 	}
 }
 defined_text ={
@@ -63,7 +63,7 @@ defined_text ={
 			}
 			always = yes
 		}
-		localization_key = ATW_dynamic_cost_pp
+		localization_key = DSM_dynamic_cost_pp
 	}
 }
 

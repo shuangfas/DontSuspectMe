@@ -16,6 +16,7 @@ ATW_the_final_solution_category = {
 				value = -0.40
 			}
 			ATW_add_suspicion = yes
+			add_war_support = -0.2
 		}
 	}
 }

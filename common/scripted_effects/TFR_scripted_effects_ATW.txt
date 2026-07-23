@@ -438,10 +438,24 @@ ATW_add_suspicion = {
 					compare = greater_than_or_equals
 				}
 			}
-			activate_mission = ATW_international_intervention_mission
-			country_event = {
-				id = dsm.4
-				days = 1
+			if = {
+				limit = {
+					NOT = {
+						has_active_mission = ATW_international_intervention_mission
+					}
+				}
+				activate_mission = ATW_international_intervention_mission
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_active_mission = DSM_disarmament_misson
+					}
+				}
+				country_event = {
+					id = dsm.4
+					days = 1
+				}
 			}
 		}
 		if = {

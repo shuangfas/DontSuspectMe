@@ -136,7 +136,7 @@ ATW_the_final_solution_category = {
 				}
 			}
 			custom_effect_tooltip = DSM_establish_a_military_buffer_zone_effect_desc
-			add_war_support = -0.3
+			add_war_support = -0.2
 			set_temp_variable = {
 				var = ATW_suspicion_var_temp
 				value = -0.2
@@ -197,7 +197,7 @@ ATW_the_final_solution_category = {
 		allowed = {
 			original_tag = ATW
 		}
-		custom_cost_text = DSM_cost_50_pp_and_50_cp
+		custom_cost_text = DSM_cost_25_pp_and_25_cp
 		custom_cost_trigger = {
 			set_temp_variable = {
 				var = DSM_temp_cost
@@ -231,9 +231,57 @@ ATW_the_final_solution_category = {
 			DSM_apply_cost_cp=yes
 			set_temp_variable = {
 				var = ATW_suspicion_var_temp
-				value = -0.05
+				value = -0.08
 			}
 			ATW_add_suspicion = yes
 		}
+	}
+	DSM_provide_benefits_increase_decision = {
+		allowed = {
+			original_tag = ATW
+		}
+		visible = {
+			check_variable = {
+				var = benefits_level
+				value = 0.3
+				compare = less_than
+			}
+		}
+		custom_cost_text = DSM_cost_25_pp
+		custom_cost_trigger = {
+			set_temp_variable = {
+				var = DSM_temp_cost
+				value = 25
+			}
+			DSM_can_afford_dynamic_cost_pp = yes
+		}
+		complete_effect = {
+			DSM_increase_benefits_level = yes
+		}
+	}
+	DSM_provide_benefits_decrease_decision = {
+		allowed = {
+			original_tag = ATW
+		}
+		visible = {
+			has_dynamic_modifier = DSM_export_adjustment
+		}
+		custom_cost_text = DSM_cost_25_pp
+		custom_cost_trigger = {
+			set_temp_variable = {
+				var = DSM_temp_cost
+				value = 25
+			}
+			DSM_can_afford_dynamic_cost_pp = yes
+		}
+		complete_effect = {
+			DSM_decrease_benefits_level = yes
+		}
+	}
+	DSM_questioning_motivation_decision = {
+		allowed = {
+			original_tag = ATW
+		}
+		
 	}
 }

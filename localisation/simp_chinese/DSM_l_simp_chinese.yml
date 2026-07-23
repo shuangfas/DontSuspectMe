@@ -1,14 +1,19 @@
 ﻿l_simp_chinese:
+ DSM_cost_25_pp: "§Y[DSM_dynamic_cost_25_pp]§!"
  DSM_cost_50_pp: "§Y[DSM_dynamic_cost_50_pp]§!"
  DSM_cost_75_pp: "§Y[DSM_dynamic_cost_75_pp]§!"
  DSM_cost_100_pp: "§Y[DSM_dynamic_cost_100_pp]§!"
  DSM_cost_50_pp_blocked: "§R[DSM_dynamic_cost_50_pp]§!"
  DSM_cost_75_pp_blocked: "§R[DSM_dynamic_cost_75_pp]§!"
  DSM_cost_100_pp_blocked: "§R[DSM_dynamic_cost_100_pp]§!"
+ DSM_cost_25_pp_and_25_cp: "§Y[DSM_dynamic_cost_25_pp_and_25_cp]§!"
+ DSM_cost_25_pp_and_25_cp_blocked: "§R[DSM_dynamic_cost_25_pp_and_25_cp]§!"
  DSM_cost_50_pp_and_50_cp: "§Y[DSM_dynamic_cost_50_pp_and_50_cp]§!"
  DSM_cost_50_pp_and_50_cp_blocked: "§R[DSM_dynamic_cost_50_pp_and_50_cp]§!"
  DSM_dynamic_cost_pp_and_cp: "£GFX_pol_power_icon [?DSM_temp_cost] £command_power [?DSM_temp_cost]"
  DSM_dynamic_cost_pp: "£GFX_pol_power_icon [?DSM_temp_cost]"
+ DSM_export_adjustment_increase_desc: "每周怀疑度§R -0.01%§!\n£traded_goods_texticon 出口资源§Y+[?export_show_temp|.1%](+10%)§!"
+ DSM_export_adjustment_decrease_desc: "每周怀疑度§R +0.01%§!\n£traded_goods_texticon 出口资源§Y+[?export_show_temp|.1%](-10%)§!"
  DSM_execute_most_extreme_extremists_decision: "清洗其他党派的极端分子"
  DSM_execute_most_extreme_extremists_decision_desc: "公开处决某些在社交媒体上公开发布极端言论的他党成员"
  DSM_establish_a_military_buffer_zone: "建立军事缓冲区"
@@ -19,6 +24,8 @@
  DSM_disarmament_misson_desc: "面对国际日益增加的怀疑度，§a[ATW.GetLeader]§!必须要展示对应的诚意，才能够减轻怀疑\n\n\n"
  DSM_disguised_nuclear_reactor_decision: "核反应堆民用化伪装"
  DSM_disguised_nuclear_reactor_decision_desc: "情报部门报告：我们的核设施已引起国际原子能机构的“特别关注”。卫星照片、地震波监测、空中采样——他们正在拼凑真相。\n我们必须抢在前面。将重水反应堆申报为“同位素生产中心”，将浓缩离心机伪装成“医用放射性药物提炼线”。我们将邀请一批经过筛选的“国际学者”——他们吃我们的饭、拿我们的钱、在我们的导游带领下走我们指定的路线——来亲眼“见证”我们的和平诚意"
+ DSM_provide_benefits_increase_decision: "向国际社会增加资源出口"
+ DSM_provide_benefits_decrease_decision: "向国际社会减少资源出口"
  dsm.1.t: "舞台"
  dsm.1.desc: "全世界的目光都聚集在那几个人身上。\n\n他们被称为“极端主义残党”。他们的名字、照片、曾经发布过的言论，被反复展示在各国新闻频道中。人们等待着观看这场公开审判，等待着一个答案。\n\n[ATW.GetName]是否真的正在改变？\n\n官方给出了肯定的回答。\n\n“我们承认过去存在错误。”\n\n“我们不会再允许仇恨和疯狂主导我们的未来。”\n\n“今天，我们清除那些最极端的声音。”\n\n而那些站在台上的人，不过是最容易被牺牲的棋子。他们不是决策者，不是计划制定者，甚至不是这个体系真正的核心。他们只是太过公开地说出了不该被世界听见的话。\n\n但这已经足够了。\n\n世界需要一个解释，而[ATW.GetName]需要一个替罪羊。\n\n当丧钟敲响，最后一个名字从名单上被划去。"
  dsm.1.a: "杀掉几个疯子，总比暴露好。"
@@ -34,3 +41,10 @@
  dsm.4.b: "静观其变"
  dsm.4.c: "我们不接受§a任何条件§!"
  dsm.4.c.desc: "这将会直接引爆§R雅利安解放战争§!!"
+
+ #############
+ #superEvents#
+ #############
+ global_aryan_liberation_war_title: "全球雅利安解放战争"
+ global_aryan_liberation_war_quote: "占位符"
+ global_aryan_liberation_war_close: "占位符"

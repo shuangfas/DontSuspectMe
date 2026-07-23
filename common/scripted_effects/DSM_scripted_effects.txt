@@ -79,3 +79,82 @@ DSM_activate_disarmament = {
 		}
 	}
 }
+
+DSM_increase_benefits_level = {
+	hidden_effect = {
+		add_to_variable = {
+			var = benefits_level
+			value = 0.1
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_dynamic_modifier = DSM_export_adjustment
+				}
+			}
+			add_dynamic_modifier = {
+				modifier = DSM_export_adjustment
+			}
+		}
+	}
+	set_temp_variable = {
+		var = export_show_temp
+		value = benefits_level
+	}
+	add_to_temp_variable = {
+		var = export_show_temp
+		value = 0.1
+	}
+	add_to_variable = {
+		var = ATW_politics_suspicion_weekly_dynamic_var
+		value = -0.001
+	}
+	custom_effect_tooltip = DSM_export_adjustment_increase_desc
+}
+
+DSM_decrease_benefits_level = {
+	hidden_effect = {
+		if = {
+			limit = {
+				check_variable = {
+					var = benefits_level
+					value = 0.1
+					compare = less_than_or_equals
+				}
+			}
+			remove_dynamic_modifier = {
+				modifier = DSM_export_adjustment
+			}
+		}
+		add_to_variable = {
+			var = benefits_level
+			value = -0.1
+		}
+	}
+	set_temp_variable = {
+		var = export_show_temp
+		value = benefits_level
+	}
+	add_to_temp_variable = {
+		var = export_show_temp
+		value = -0.1
+	}
+	add_to_variable = {
+		var = ATW_politics_suspicion_weekly_dynamic_var
+		value = 0.001
+	}
+	custom_effect_tooltip = DSM_export_adjustment_decrease_desc
+}
+DSM_all_country_declare_war = {
+    hidden_effect = {
+        every_country = {
+            limit = {
+                NOT = { tag = ATW }
+            }
+            declare_war_on = {
+				target = ATW
+				type = annex_everything
+			} 
+        }
+    }
+}

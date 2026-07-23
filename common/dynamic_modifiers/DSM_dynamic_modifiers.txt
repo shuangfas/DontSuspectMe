@@ -1,0 +1,7 @@
+DSM_export_adjustment = {
+	icon = GFX_idea_generic_trade
+	enable = {
+		tag = ATW
+	}
+    min_export = benefits_level
+}

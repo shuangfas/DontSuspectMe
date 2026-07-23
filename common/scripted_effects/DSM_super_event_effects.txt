@@ -1,0 +1,12 @@
+DSM_global_aryan_liberation_war = {
+	hidden_effect = {
+		if = {
+			limit = {
+				is_ai = no
+			 }
+		}
+		set_country_flag = global_aryan_liberation_war_SE_flag
+		sound_effect = DSM_global_aryan_liberation_war_sound
+		scoped_play_song = "one_minute_of_silence"
+	}
+}

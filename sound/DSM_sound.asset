@@ -1,0 +1,11 @@
+sound = {
+	name = "DSM_global_aryan_liberation_war_sound"
+	file = "super_event/DSM_global_aryan_liberation_war.wav"
+}
+soundeffect = {
+		name = "DSM_global_aryan_liberation_war_sound"
+		sounds = {
+			sound = DSM_global_aryan_liberation_war_sound
+		}
+		volume = 3.0
+}

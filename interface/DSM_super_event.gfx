@@ -1,0 +1,8 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_global_aryan_liberation_war"
+		textureFile = "gfx/event_pictures/super_event/global_aryan_liberation_war.png"
+		legacy_lazy_load = no
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+}

@@ -98,3 +98,21 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = dsm.5
+	title = dsm.5.t
+	desc = dsm.5.desc
+	picture = DSM_dsm_dsm_5
+	is_triggered_only = yes
+	trigger = {
+		tag = ATW
+	}
+	immediate = {
+		DSM_all_country_declare_war=yes
+	}
+	option = {
+		name = dsm.5.a
+		DSM_global_aryan_liberation_war = yes
+	}
+}

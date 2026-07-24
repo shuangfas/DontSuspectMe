@@ -1,7 +1,12 @@
 on_actions = {
 	on_daily_ATW = {
 		effect = {
-			DSM_calcucate_discount=yes
+			if = {
+				limit = {
+					has_country_flag = ATW_on_the_world_stage_flag
+				}
+				DSM_calculate_discount = yes
+			}
 		}
 	}
 	#TODO:多次行动增加花费
@@ -10,15 +15,15 @@ on_actions = {
 	#		
 	#	}
 	#}
-	on_war = {
-		effect={
+	on_weekly_ATW = {
+		effect = {
 			if = {
-				limit = { 
-					this = {
-						tag = ATW
-						has_country_flag = ATW_the_final_solution_super
-					}
+				limit = {
+					has_country_flag = ATW_on_the_world_stage_flag
 				}
+				DSM_calculate_civilian_intel_factor = yes
+				DSM_calculate_suspicion_weekly_factor = yes
+			}
 		}
 	}
 }

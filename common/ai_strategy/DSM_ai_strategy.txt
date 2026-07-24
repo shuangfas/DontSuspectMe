@@ -1,0 +1,22 @@
+DSM_build_intel_network_to_ATW = {
+	allowed = {
+		NOT = {
+			original_tag = ATW
+		}
+	}
+	enable = {
+		THIS = {
+			has_idea = DSM_idea_increase_tend_build_intel_network
+		}
+	}
+	ai_strategy = {
+		type = operative_mission
+		value = 114514
+		mission = build_intel_network
+		mission_target = ATW
+		state = 361
+		state = 931
+		state = 1122
+	}
+	abort_when_not_enabled = yes
+}

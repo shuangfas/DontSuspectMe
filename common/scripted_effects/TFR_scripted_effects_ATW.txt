@@ -444,7 +444,9 @@ ATW_add_suspicion = {
 						has_active_mission = ATW_international_intervention_mission
 					}
 				}
-				activate_mission = ATW_international_intervention_mission
+				hidden_effect = {
+					activate_mission = ATW_international_intervention_mission
+				}
 			}
 			if = {
 				limit = {
@@ -452,9 +454,11 @@ ATW_add_suspicion = {
 						has_active_mission = DSM_disarmament_misson
 					}
 				}
-				country_event = {
-					id = dsm.4
-					days = 1
+				hidden_effect = {
+					country_event = {
+						id = dsm.4
+						days = 1
+					}
 				}
 			}
 		}
@@ -466,7 +470,9 @@ ATW_add_suspicion = {
 					compare = greater_than_or_equals
 				}
 			}
-			activate_mission = ATW_popular_revolt_mission
+			hidden_effect = {
+				activate_mission = ATW_popular_revolt_mission
+			}
 		}
 		if = {
 			limit = {
@@ -476,7 +482,9 @@ ATW_add_suspicion = {
 					compare = greater_than_or_equals
 				}
 			}
-			activate_mission = ATW_popular_revolt_mission
+			hidden_effect = {
+				activate_mission = ATW_popular_revolt_mission
+			}
 		}
 	}
 }

@@ -1,4 +1,4 @@
-DSM_calcucate_discount = {
+DSM_calculate_discount = {
 	set_variable = {
 		var = DSM_dynamic_cost_ratio
 		value = 0
@@ -9,7 +9,7 @@ DSM_calcucate_discount = {
 	}
 	subtract_from_variable = {
 		var = DSM_dynamic_cost_ratio
-		value = 0.25
+		value = 0.40
 	}
 	multiply_variable = {
 		var = DSM_dynamic_cost_ratio
@@ -21,7 +21,7 @@ DSM_calcucate_discount = {
 	}
 	clamp_variable = {
 		var = DSM_dynamic_cost_ratio
-		min = 0.4
+		min = 0.35
 		max = 5
 	}
 }
@@ -105,10 +105,11 @@ DSM_increase_benefits_level = {
 		var = export_show_temp
 		value = 0.1
 	}
-	add_to_variable = {
-		var = ATW_politics_suspicion_weekly_dynamic_var
-		value = -0.001
+	set_temp_variable = {
+		var = temp_num
+		value = -0.1
 	}
+	DSM_increase_suspicion_weekly_factor_modifier = yes
 	custom_effect_tooltip = DSM_export_adjustment_increase_desc
 }
 
@@ -139,22 +140,106 @@ DSM_decrease_benefits_level = {
 		var = export_show_temp
 		value = -0.1
 	}
-	add_to_variable = {
-		var = ATW_politics_suspicion_weekly_dynamic_var
-		value = 0.001
+	set_temp_variable = {
+		var = temp_num
+		value = 0.1
 	}
+	DSM_increase_suspicion_weekly_factor_modifier = yes
 	custom_effect_tooltip = DSM_export_adjustment_decrease_desc
 }
+
 DSM_all_country_declare_war = {
-    hidden_effect = {
-        every_country = {
-            limit = {
-                NOT = { tag = ATW }
-            }
-            declare_war_on = {
+	hidden_effect = {
+		every_country = {
+			limit = {
+				NOT = {
+					tag = ATW
+				}
+			}
+			declare_war_on = {
 				target = ATW
 				type = annex_everything
-			} 
-        }
-    }
+			}
+		}
+	}
+}
+DSM_calculate_civilian_intel_factor = {
+	set_variable = {
+		var = ATW.DSM_civilian_intel_sum
+		value = 0
+	}
+	set_variable = {
+		var = ATW.DSM_country_num
+		value = 0
+	}
+	every_country = {
+		limit = {
+			NOT = {
+				tag = ATW
+			}
+			is_major = yes
+			has_intelligence_agency = yes
+		}
+		set_temp_variable = {
+			var = temp_intel
+			value = THIS.civilian_intel@ATW
+		}
+		add_to_variable = {
+			var = ATW.DSM_country_num
+			value = 1
+		}
+		clamp_temp_variable = {
+			var = temp_intel
+			min = 0
+			max = 100
+		}
+		ATW = {
+			add_to_variable = {
+				var = ATW.DSM_civilian_intel_sum
+				value = temp_intel
+			}
+		}
+	}
+}
+DSM_increase_suspicion_weekly_factor_modifier = {
+	add_to_variable = {
+		var = suspicion_weekly_factor_modifier
+		value = temp_num
+	}
+	custom_effect_tooltip = DSM_suspicion_weekly_factor_modifier
+	DSM_calculate_suspicion_weekly_factor = yes
+}
+DSM_calculate_suspicion_weekly_factor = {
+	add_to_temp_variable = {
+		var = factor_temp
+		value = DSM_civilian_intel_sum
+	}
+	multiply_temp_variable = {
+		var = factor_temp
+		value = 0.008
+	}
+	divide_temp_variable = {
+		var = factor_temp
+		value = DSM_country_num
+	}
+	add_to_temp_variable = {
+		var = factor_temp
+		value = suspicion_weekly_factor_modifier
+	}
+	add_to_temp_variable = {
+		var = factor_temp
+		value = 1
+	}
+	set_variable = {
+		var = suspicion_weekly_factor
+		value = factor_temp
+	}
+	set_variable = {
+		var = ATW_politics_suspicion_weekly_dynamic_var
+		value = 0.005
+	}
+	multiply_variable = {
+		var = ATW_politics_suspicion_weekly_dynamic_var
+		value = suspicion_weekly_factor
+	}
 }

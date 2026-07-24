@@ -9,14 +9,14 @@ ATW_the_final_solution_category = {
 				var = DSM_temp_cost
 				value = 75
 			}
-			DSM_can_afford_dynamic_cost_pp=yes
+			DSM_can_afford_dynamic_cost_pp = yes
 		}
 		complete_effect = {
 			set_temp_variable = {
 				var = DSM_temp_cost
 				value = 75
 			}
-			DSM_apply_cost_pp=yes
+			DSM_apply_cost_pp = yes
 		}
 		days_remove = 30
 		days_re_enable = 50
@@ -36,7 +36,7 @@ ATW_the_final_solution_category = {
 				var = DSM_temp_cost
 				value = 100
 			}
-			DSM_can_afford_dynamic_cost_pp=yes
+			DSM_can_afford_dynamic_cost_pp = yes
 		}
 		fire_only_once = yes
 		complete_effect = {
@@ -146,7 +146,7 @@ ATW_the_final_solution_category = {
 				var = DSM_temp_cost
 				value = 100
 			}
-			DSM_apply_cost_pp=yes
+			DSM_apply_cost_pp = yes
 			country_event = {
 				id = dsm.2
 			}
@@ -162,7 +162,7 @@ ATW_the_final_solution_category = {
 				var = DSM_temp_cost
 				value = 75
 			}
-			DSM_can_afford_dynamic_cost_pp=yes
+			DSM_can_afford_dynamic_cost_pp = yes
 		}
 		#fire_only_once = yes
 		days_remove = 7
@@ -185,7 +185,7 @@ ATW_the_final_solution_category = {
 				var = DSM_temp_cost
 				value = 75
 			}
-			DSM_apply_cost_pp=yes
+			DSM_apply_cost_pp = yes
 		}
 		remove_effect = {
 			country_event = {
@@ -223,12 +223,12 @@ ATW_the_final_solution_category = {
 				var = DSM_temp_cost
 				value = 50
 			}
-			DSM_apply_cost_pp=yes
+			DSM_apply_cost_pp = yes
 			set_temp_variable = {
 				var = DSM_temp_cost
 				value = 50
 			}
-			DSM_apply_cost_cp=yes
+			DSM_apply_cost_cp = yes
 			set_temp_variable = {
 				var = ATW_suspicion_var_temp
 				value = -0.08
@@ -282,6 +282,23 @@ ATW_the_final_solution_category = {
 		allowed = {
 			original_tag = ATW
 		}
-		
+		days_remove = 5
+		days_re_enable = 30
+		custom_cost_text = DSM_cost_50_pp
+		custom_cost_trigger = {
+			set_temp_variable = {
+				var = DSM_temp_cost
+				value = 50
+			}
+			DSM_can_afford_dynamic_cost_pp = yes
+		}
+		complete_effect = {
+			set_temp_variable = {
+				var = ATW_suspicion_var_temp
+				value = 0.08
+			}
+			ATW_add_suspicion = yes
+			add_war_support = 0.1
+		}
 	}
 }
